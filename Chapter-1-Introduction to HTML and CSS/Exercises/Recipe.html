@@ -1,291 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gourmet Chocolate Chip Cookies</title>
-    <style>
-        /* CSS Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        /* Page Styling */
-        body {
-            background-color: #f9f5f0;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            color: #5d4037;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .recipe-meta {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .recipe-img {
-            max-width: 80%; /* Reduced from 100% */
-            height: auto;
-            max-height: 400px; /* Added max-height */
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            object-fit: cover; /* Ensures proper image scaling */
-        }
-        
-        .description {
-            font-style: italic;
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #f0e6d2;
-            border-left: 4px solid #8d6e63;
-        }
-        
-        /* Sections */
-        section {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: #6d4c41;
-            border-bottom: 2px solid #d7ccc8;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        /* Lists */
-        ul, ol {
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-        }
-        
-        /* Ingredients Grid */
-        .ingredients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        
-        /* Nutrition Info */
-        .nutrition-facts {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #777;
-        }
-        
-        /* Print Button */
-        .print-btn {
-            background-color: #8d6e63;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        
-        .print-btn:hover {
-            background-color: #6d4c41;
-        }
-        
-        @media print {
-            .print-btn, footer {
-                display: none;
-            }
-            
-            body {
-                background-color: white;
-                padding: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .recipe-img {
-                max-width: 100%; /* Full width on mobile */
-                max-height: 300px; /* Smaller height on mobile */
-            }
-            
-            .recipe-meta {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Recipe Header -->
     <header>
-        <h1>Gourmet Chocolate Chip Cookies</h1>
-        <p class="description">
-            These aren't your average chocolate chip cookies! With browned butter, sea salt, 
-            and premium chocolate chunks, this elevated version of the classic will become 
-            your new favorite.
-        </p>
-        <div class="recipe-meta">
-            <span class="meta-item">⏱️ Prep: 20 mins</span>
-            <span class="meta-item">🍪 Cook: 12 mins</span>
-            <span class="meta-item">🍽️ Servings: 24</span>
-        </div>
-        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600" 
-             alt="Chocolate chip cookies" 
-             class="recipe-img"
-             loading="lazy"> <!-- Added lazy loading -->
+      <h1>Gourmet Chocolate Chip Cookies</h1>
+      <p class="description">
+        These aren't your average chocolate chip cookies! With browned butter,
+        sea salt, and premium chocolate chunks, this elevated version of the
+        classic will become your new favorite.
+      </p>
+      <div class="recipe-meta">
+        <span class="meta-item">⏱️ Prep: 20 mins</span>
+        <span class="meta-item">🍪 Cook: 12 mins</span>
+        <span class="meta-item">🍽️ Servings: 24</span>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600"
+        alt="Chocolate chip cookies"
+        class="recipe-img"
+        loading="lazy"
+      />
     </header>
-    
+
     <!-- Ingredients Section -->
     <section id="ingredients">
-        <h2>Ingredients</h2>
-        <div class="ingredients-grid">
-            <div>
-                <h3>Dry Ingredients</h3>
-                <ul>
-                    <li>2 1/4 cups (280g) all-purpose flour</li>
-                    <li>1 tsp baking soda</li>
-                    <li>1 1/2 tsp cornstarch</li>
-                    <li>1/2 tsp fine sea salt</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Wet Ingredients</h3>
-                <ul>
-                    <li>1 cup (227g) unsalted butter</li>
-                    <li>3/4 cup (150g) granulated sugar</li>
-                    <li>3/4 cup (165g) packed dark brown sugar</li>
-                    <li>2 large eggs + 1 yolk</li>
-                    <li>2 tsp vanilla extract</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Add-ins</h3>
-                <ul>
-                    <li>8 oz (225g) semi-sweet chocolate chunks</li>
-                    <li>4 oz (115g) milk chocolate, chopped</li>
-                    <li>Flaky sea salt for finishing</li>
-                </ul>
-            </div>
+      <h2>Ingredients</h2>
+      <div class="ingredients-grid">
+        <div>
+          <h3>Dry Ingredients</h3>
+          <ul>
+            <li>2 1/4 cups (280g) all-purpose flour</li>
+            <li>1 tsp baking soda</li>
+            <li>1 1/2 tsp cornstarch</li>
+            <li>1/2 tsp fine sea salt</li>
+          </ul>
         </div>
+        <div>
+          <h3>Wet Ingredients</h3>
+          <ul>
+            <li>1 cup (227g) unsalted butter</li>
+            <li>3/4 cup (150g) granulated sugar</li>
+            <li>3/4 cup (165g) packed dark brown sugar</li>
+            <li>2 large eggs + 1 yolk</li>
+            <li>2 tsp vanilla extract</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Add-ins</h3>
+          <ul>
+            <li>8 oz (225g) semi-sweet chocolate chunks</li>
+            <li>4 oz (115g) milk chocolate, chopped</li>
+            <li>Flaky sea salt for finishing</li>
+          </ul>
+        </div>
+      </div>
     </section>
-    
+
     <!-- Instructions Section -->
     <section id="instructions">
-        <h2>Instructions</h2>
-        <ol>
-            <li><strong>Brown the butter:</strong> Melt butter in a light-colored saucepan over medium heat, swirling constantly. Continue cooking until butter turns amber in color and develops nutty aroma (about 5-7 minutes). Immediately transfer to a heatproof bowl to stop cooking.</li>
-            <li><strong>Chill butter:</strong> Let butter cool for 15 minutes at room temperature, then refrigerate for 30 minutes until it solidifies but is still soft.</li>
-            <li><strong>Prep dry ingredients:</strong> Whisk together flour, baking soda, cornstarch, and salt in a medium bowl.</li>
-            <li><strong>Cream butter and sugars:</strong> Using a stand mixer with paddle attachment, beat the browned butter with both sugars on medium speed for 2 minutes until light and fluffy.</li>
-            <li><strong>Add eggs and vanilla:</strong> Add eggs one at a time, then the yolk, mixing well after each addition. Add vanilla and mix until combined.</li>
-            <li><strong>Combine dry ingredients:</strong> Gradually add the dry ingredients on low speed, mixing just until incorporated.</li>
-            <li><strong>Add chocolate:</strong> Fold in chocolate chunks and chopped milk chocolate.</li>
-            <li><strong>Chill dough:</strong> Cover and chill dough for at least 2 hours (up to 72 hours for best flavor).</li>
-            <li><strong>Preheat oven:</strong> When ready to bake, preheat oven to 350°F (175°C) and line baking sheets with parchment.</li>
-            <li><strong>Scoop dough:</strong> Using a 2-tablespoon cookie scoop, portion dough onto sheets, spacing 3 inches apart.</li>
-            <li><strong>Bake:</strong> Bake for 10-12 minutes until edges are golden but centers look slightly underdone.</li>
-            <li><strong>Finish:</strong> Immediately sprinkle with flaky sea salt and let cool on sheets for 5 minutes before transferring to wire racks.</li>
-        </ol>
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Brown the butter:</strong> Melt butter in a light-colored
+          saucepan over medium heat, swirling constantly. Continue cooking until
+          butter turns amber in color and develops nutty aroma (about 5-7
+          minutes). Immediately transfer to a heatproof bowl to stop cooking.
+        </li>
+        <li>
+          <strong>Chill butter:</strong> Let butter cool for 15 minutes at room
+          temperature, then refrigerate for 30 minutes until it solidifies but
+          is still soft.
+        </li>
+        <li>
+          <strong>Prep dry ingredients:</strong> Whisk together flour, baking
+          soda, cornstarch, and salt in a medium bowl.
+        </li>
+        <li>
+          <strong>Cream butter and sugars:</strong> Using a stand mixer with
+          paddle attachment, beat the browned butter with both sugars on medium
+          speed for 2 minutes until light and fluffy.
+        </li>
+        <li>
+          <strong>Add eggs and vanilla:</strong> Add eggs one at a time, then
+          the yolk, mixing well after each addition. Add vanilla and mix until
+          combined.
+        </li>
+        <li>
+          <strong>Combine dry ingredients:</strong> Gradually add the dry
+          ingredients on low speed, mixing just until incorporated.
+        </li>
+        <li>
+          <strong>Add chocolate:</strong> Fold in chocolate chunks and chopped
+          milk chocolate.
+        </li>
+        <li>
+          <strong>Chill dough:</strong> Cover and chill dough for at least 2
+          hours (up to 72 hours for best flavor).
+        </li>
+        <li>
+          <strong>Preheat oven:</strong> When ready to bake, preheat oven to
+          350°F (175°C) and line baking sheets with parchment.
+        </li>
+        <li>
+          <strong>Scoop dough:</strong> Using a 2-tablespoon cookie scoop,
+          portion dough onto sheets, spacing 3 inches apart.
+        </li>
+        <li>
+          <strong>Bake:</strong> Bake for 10-12 minutes until edges are golden
+          but centers look slightly underdone.
+        </li>
+        <li>
+          <strong>Finish:</strong> Immediately sprinkle with flaky sea salt and
+          let cool on sheets for 5 minutes before transferring to wire racks.
+        </li>
+      </ol>
     </section>
-    
+
     <!-- Tips Section -->
     <section id="tips">
-        <h2>Baker's Tips</h2>
-        <ul>
-            <li>For extra flavor, brown the butter until you see dark brown specks at the bottom of the pan</li>
-            <li>Chilling the dough is crucial - it prevents spreading and enhances flavor</li>
-            <li>Use a mix of chocolate chunks and chopped chocolate for varied texture</li>
-            <li>Underbake slightly for soft, chewy centers</li>
-            <li>Dough balls can be frozen for up to 3 months - bake from frozen, adding 1-2 minutes</li>
-        </ul>
+      <h2>Baker's Tips</h2>
+      <ul>
+        <li>
+          For extra flavor, brown the butter until you see dark brown specks at
+          the bottom of the pan
+        </li>
+        <li>
+          Chilling the dough is crucial - it prevents spreading and enhances
+          flavor
+        </li>
+        <li>
+          Use a mix of chocolate chunks and chopped chocolate for varied texture
+        </li>
+        <li>Underbake slightly for soft, chewy centers</li>
+        <li>
+          Dough balls can be frozen for up to 3 months - bake from frozen,
+          adding 1-2 minutes
+        </li>
+      </ul>
     </section>
-    
+
     <!-- Nutrition Section -->
     <section id="nutrition">
-        <h2>Nutrition Information</h2>
-        <p>Per serving (1 cookie):</p>
-        <div class="nutrition-facts">
-            <table>
-                <tr>
-                    <th>Calories</th>
-                    <td>220</td>
-                </tr>
-                <tr>
-                    <th>Fat</th>
-                    <td>12g</td>
-                </tr>
-                <tr>
-                    <th>Carbs</th>
-                    <td>26g</td>
-                </tr>
-                <tr>
-                    <th>Protein</th>
-                    <td>3g</td>
-                </tr>
-            </table>
-        </div>
+      <h2>Nutrition Information</h2>
+      <p>Per serving (1 cookie):</p>
+      <div class="nutrition-facts">
+        <table>
+          <tr>
+            <th>Calories</th>
+            <td>220</td>
+          </tr>
+          <tr>
+            <th>Fat</th>
+            <td>12g</td>
+          </tr>
+          <tr>
+            <th>Carbs</th>
+            <td>26g</td>
+          </tr>
+          <tr>
+            <th>Protein</th>
+            <td>3g</td>
+          </tr>
+        </table>
+      </div>
     </section>
-    
+
     <!-- Print Button -->
     <button class="print-btn" onclick="window.print()">Print Recipe</button>
-    
+
     <!-- Footer -->
-    <footer>
-        <p>© 2023 Gourmet Baking Co. | Recipe adapted from professional bakers</p>
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>
